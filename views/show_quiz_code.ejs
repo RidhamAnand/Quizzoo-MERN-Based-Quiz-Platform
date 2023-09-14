@@ -1,0 +1,49 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Code</title>
+    <link rel="stylesheet" href="css\styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<style>
+     body{
+        background: #7F00FF;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #E100FF, #7F00FF);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #E100FF, #7F00FF);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+    }
+</style>
+</head>
+<body>
+    <div class="main container-fluid" style=" margin-bottom: 30px;">
+        <h1 style="font-weight: 800;">QUIZZOO</h1>
+
+    </div>
+    
+    <div class="quiz-code">
+        <h1> <b>QUIZZOO </b>  Quiz Created</h1> <br>
+      
+        <h2 > Your Quiz Code : <span id="myText"><%=quizcode%></span>  </h2>
+<button class="btn btn-dark btn-lg" style="margin: 20px;" onclick="copyContent()">Copy Quiz Code</button>
+    
+    </div>
+    <script>
+        let text = document.getElementById('myText').innerHTML;
+        const copyContent = async () => {
+          try {
+            await navigator.clipboard.writeText(text);
+            console.log('Content copied to clipboard');
+            alert("Click OK to copy Quiz Code");
+
+          } catch (err) {
+            console.error('Failed to copy: ', err);
+          }
+        }
+      </script>
+</body>
+</html>
+

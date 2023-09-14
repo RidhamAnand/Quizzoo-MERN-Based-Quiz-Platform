@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Login</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css\styles.css">
+
+        
+
+</head>
+<body>
+  <div class="form-container">
+    <form  method="POST" action="/quiz-login" class="stu-form teacher-login container-fluid" style="width: 50%;">
+        <h1 class="mb-4" style="text-align: center; font-weight: 800;text-transform: uppercase;">WELCOME <%=studentName%> </h1>
+        <!-- Email input -->
+        <div class="form-outline mb-4">
+          <input type="text" placeholder="Quiz Code" id="form2Example1" class="form-control" name = "quiz_code"/>
+         
+        </div>
+        <button class="btn btn-block btn-lg btn-success" type="submit">Start Quiz</button>
+      </form>
+    </div>
+    <%- include('footer'); -%>
+</body>
+</html>
